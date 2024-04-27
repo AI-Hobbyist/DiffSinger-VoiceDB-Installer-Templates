@@ -12,4 +12,5 @@
  **MyAppURL：** 声库网站<p>
  **OpenUtauDir：** OpenUtau的目录<p>
  **SingerDir：** 要打包的声库文件夹名字<p>
-
+### 安装包效果演示
+![Image](https://fj.ai-hobbyist.org/aibbs/forum/202404/27/173926p0cy3wjpoovawoow.png)
