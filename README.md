@@ -1,0 +1,1 @@
+# DiffSinger-VoiceDB-Setup-Templates
