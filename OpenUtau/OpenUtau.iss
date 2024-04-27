@@ -3,21 +3,21 @@
 ; 应用信息
 #define MyAppName "OpenUtau"
 #define MyAppVersion "0.1.443.40"
-#define MyAppPublisher "Xunmengshe"
-#define MyAppURL "https://github.com/xunmengshe/OpenUtau"
+#define MyAppPublisher "Hrukalive"
+#define MyAppURL "https://github.com/hrukalive/OpenUtau/tree/remote-inference"
 #define MyAppExeName "OpenUtau.exe"
 #define MyAppAssocName MyAppName + " 工程文件"
 #define MyAppAssocExt ".ustx"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 
 ; 其它设置
-#define AppSource "D:\UserData\Desktop\声库安装包\OpenUtau\sources\xunmengshe version"
+#define AppSource "Source"
 
 [Setup]
 ; 注: AppId的值为单独标识该应用程序。
 ; 不要为其他安装程序使用相同的AppId值。
 ; (若要生成新的 GUID，可在菜单中点击 "工具|生成 GUID"。)
-AppId={{C9A62C79-8DA2-44C8-A56E-AA65D2F76C16}
+AppId={{633EEDFA-93A3-4AC3-964A-E148F2354616}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -56,11 +56,12 @@ Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}"; ValueType: string; Value
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\{#MyAppExeName},0"
 Root: HKA; Subkey: "Software\Classes\{#MyAppAssocKey}\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#MyAppExeName}"" ""%1"""
 Root: HKA; Subkey: "Software\Classes\Applications\{#MyAppExeName}\SupportedTypes"; ValueType: string; ValueName: ".ustx"; ValueData: ""
+Root: HKA; Subkey: "Software\{#MyAppName}";  ValueType: string; ValueName: "Path"; ValueData: "{app}" 
 
 [Icons]
-Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{autoprograms}\OpenUtau {#MyAppPublisher} Version\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
-Name: "{autoprograms}\Uninstall {#MyAppName}"; Filename: "{uninstallexe}"
+Name: "{autoprograms}\OpenUtau {#MyAppPublisher} Version\Uninstall {#MyAppName}"; Filename: "{uninstallexe}"
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
